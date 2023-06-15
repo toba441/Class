@@ -14,3 +14,13 @@ fs.rename(currentName, newName, (err) => {
 const my_module = require('./mymodule');
 
 my_module.sayHello();
+// const fs = require('fs');
+const fileName = 'newFile.txt';
+
+fs.unlink(fileName, (err) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log('File deleted successfully!');
+});
